@@ -1,0 +1,15 @@
+h1. Zootool for Safari
+
+A toolbar icon to use the Zootool Lasso
+
+h2. Download
+
+You can download Zootool for Safari *"here":http://epogue.s3.amazonaws.com/Zootool.safariextz*
+
+h2. Credit
+
+Pretty much all the credit goes to the Zootool team for their Lasso tool. I just rigged it to work in Safari.
+
+h2. To-do
+
+* Add a way to just automatically save the page without ever hitting the Lasso tool

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Elliott Pogue</string>
+	<key>CFBundleDisplayName</key>
+	<string>Zootool</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.epogue.safari.zootool</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.1</string>
+	<key>CFBundleVersion</key>
+	<string>10</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Global Page</key>
+		<string>global.html</string>
+		<key>Toolbar Items</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<string>zootool-lasso-button</string>
+				<key>Image</key>
+				<string>toolbar-icon.png</string>
+				<key>Label</key>
+				<string>Zootool</string>
+				<key>Palette Label</key>
+				<string>Zootool Lasso</string>
+				<key>Tool Tip</key>
+				<string>Show the Zootool Lasso</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>zootool.js</string>
+			</array>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>A toolbar icon to use the Zootool Lasso</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
