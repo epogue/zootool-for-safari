@@ -11,9 +11,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.22</string>
+	<string>0.23</string>
 	<key>CFBundleVersion</key>
-	<string>22</string>
+	<string>23</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
@@ -59,6 +59,6 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://github.com/epogue/zootool-for-safari/raw/master/updateManifest.plist</string>
+	<string>http://epogue.s3.amazonaws.com/updateManifest.plist</string>
 </dict>
 </plist>
