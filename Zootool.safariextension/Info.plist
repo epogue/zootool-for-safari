@@ -21,6 +21,8 @@
 		<key>Toolbar Items</key>
 		<array>
 			<dict>
+				<key>Command</key>
+				<string></string>
 				<key>Identifier</key>
 				<string>zootool-lasso-button</string>
 				<key>Image</key>
@@ -60,5 +62,7 @@
 	</dict>
 	<key>Update Manifest URL</key>
 	<string>http://epogue.s3.amazonaws.com/updateManifest.plist</string>
+	<key>Website</key>
+	<string>http://dinkdoink.com</string>
 </dict>
 </plist>

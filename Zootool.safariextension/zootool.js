@@ -2,11 +2,18 @@ var isInIFrame = (window.location != window.parent.location) ? true : false;
 if (isInIFrame == true) {
 	
 } else {
+	var shift = 0;
+	
 	function handleMessage(msgEvent) {
 		var messageName = msgEvent.name;
 		var messageData = msgEvent.message;
 		if (messageName === "zootool-lasso") {
-			fireLasso();
+			if ((shift == 1 && messageData.buttonBehavior == "open") || (shift == 0 && messageData.buttonBehavior == "lasso")) {
+				fireLasso();
+			} else {
+				safari.self.tab.dispatchMessage("openZootool","");
+				shift = 0;
+			}
 		}
 	}
 
@@ -26,6 +33,17 @@ if (isInIFrame == true) {
 		ss.appendChild(tt);
 		d.body.appendChild(ss);
 	}
+	
+	function handleKeyDown(event){
+		if (event.keyCode == '16') shift = 1;
+	}
+	
+	function handleKeyUp(event){
+		if (event.keyCode == '16') shift = 0;
+	}
+
+	document.addEventListener("keydown", handleKeyDown, false);
+	document.addEventListener("keyup", handleKeyUp, false);
 
 	safari.self.addEventListener("message", handleMessage, false);
 }

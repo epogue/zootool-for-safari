@@ -3,23 +3,27 @@
 <head>
 <title>Laterstars</title>
 <script type="text/javascript">
-function performCommand(event)
-{
-    if (event.command === "zootool-lasso-button") {
-        safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("zootool-lasso", "");
-    }
-}
- 
-function validateCommand(event)
-{
-    if (event.command === "zootool-lasso-button") {
-        
-    }
-}
- 
 safari.application.addEventListener("command", performCommand, false);
+safari.application.addEventListener("message", receiveMessage, false);
 safari.application.addEventListener("validate", validateCommand, false);
 
+function performCommand(event){
+    if (event.command === "zootool-lasso-button") {
+        safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("zootool-lasso", { buttonBehavior: safari.extension.settings.getItem("buttonBehavior") });
+    }
+}
+ 
+function validateCommand(event){
+    if (event.command === "zootool-lasso-button") {
+        event.target.disabled = !event.target.browserWindow.activeTab.url;
+    }
+}
+
+function receiveMessage(msgEvent){
+	if (msgEvent.name === "openZootool") {
+		safari.application.activeBrowserWindow.openTab().url = "http://zootool.com/zoo/";
+	}
+}
 </script>
 </head>
 <body></body>
