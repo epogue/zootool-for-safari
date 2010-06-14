@@ -1,3 +1,7 @@
+h1. Important notice!
+
+This extension will probably be discontinued from this point on. "Bastian Allgeier":http://www.bastian-allgeier.de/ and I have consolidated our separate addons into "the official Zootool extension":http://zootool.com/tools/browser.
+
 h1. Zootool for Safari
 
 A toolbar icon to use the Zootool Lasso
